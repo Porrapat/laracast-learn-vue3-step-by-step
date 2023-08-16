@@ -26,13 +26,18 @@
 </head>
 <body>
     <div id="app">
-        <button :class="buttonClass">Click me</button>
+        <button :class="active ? 'text-red' : 'text-green'" @click="toggle">Click me</button>
     </div>
     <script>
         Vue.createApp({
             data() {
                 return {
-                    buttonClass: 'text-green'
+                    active: false
+                }
+            },
+            methods: {
+                toggle() {
+                    this.active = !this.active;
                 }
             }
         }).mount('#app');
