@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "startwin": "npx serve | npx json-server db.json -p 3001",
+    "startunix": "npx serve & npx json-server db.json -p 3001"
+  },
   "devDependencies": {
     "json-server": "^0.17.3"
   }
