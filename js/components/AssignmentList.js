@@ -8,12 +8,19 @@ export default {
             </h2>
 
             <div class="flex gap-2">
-                <button class="rounded border px-1 py-px text-xs" v-for="tag in tags">{{ tag }}</button>
+                <button 
+                    @click="currentTag = tag"
+                    class="rounded border px-1 py-px text-xs" 
+                    v-for="tag in tags"
+                    :class="{
+                        'border-blue-500 text-blue-500': tag == currentTag
+                    }"
+                >{{ tag }}</button>
             </div>
 
             <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
                 <assignment
-                    v-for="assignment in assignments"
+                    v-for="assignment in filteredAssignments"
                     :key="assignment.id"
                     :assignment="assignment"
                 ></assignment>
@@ -26,9 +33,22 @@ export default {
         title: String,
     },
 
+    data() {
+        return {
+            currentTag: 'all'
+        };
+    },
     computed: {
+
+        filteredAssignments () {
+            if (this.currentTag == 'all')
+            {
+                return this.assignments;
+            }
+            return this.assignments.filter(a => a.tag == this.currentTag);
+        },
         tags () {
-            return new Set(this.assignments.map(a => a.tag));
+            return ['all', ...new Set(this.assignments.map(a => a.tag))];
         }
     }
 }
