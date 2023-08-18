@@ -6,7 +6,7 @@ export default {
     components: { Assignment, AssignmentTags, Panel },
 
     template: `
-        <Panel v-show="assignments.length" class="w-70">
+        <Panel v-show="assignments.length" class="w-60">
             <div class="flex justify-between items-start">
                 <h2 class="font-bold mb-2">
                     {{ title }}
