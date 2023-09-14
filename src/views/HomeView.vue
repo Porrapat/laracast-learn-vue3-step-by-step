@@ -1,12 +1,23 @@
-<script setup>
+<script>
 import TheWelcome from '../components/TheWelcome.vue'
 import { ref } from 'vue'
 
-let message = ref('Hello World')
+export default {
+  components: { TheWelcome },
 
-setTimeout(() => {
-  message.value = 'Changed'
-}, 2000)
+  setup() {
+    let message = ref('Hello World')
+
+    setTimeout(() => {
+      message.value = 'Changed'
+    }, 2000)
+    
+    return {
+      message
+    }
+  }
+}
+
 </script>
 
 <template>
