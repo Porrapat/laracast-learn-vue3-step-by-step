@@ -1,29 +1,15 @@
 <script>
-import TheWelcome from '../components/TheWelcome.vue'
-import { ref } from 'vue'
+
+import flash from '@/mixins/flash';
 
 export default {
-  components: { TheWelcome },
-
-  setup() {
-    let message = ref('Hello World')
-
-    setTimeout(() => {
-      message.value = 'Changed'
-    }, 2000)
-    
-    return {
-      message
-    }
-  }
+  mixins: [flash]
 }
 
 </script>
 
 <template>
   <main>
-    <TheWelcome />
-    <p><input v-model="message" type="text" /></p>
-    <p>{{ message }}</p>
+    <button @click="flash('It is work!')">Click Me!</button>
   </main>
 </template>
