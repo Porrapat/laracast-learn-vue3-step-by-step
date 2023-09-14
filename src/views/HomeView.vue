@@ -1,10 +1,12 @@
 <script setup>
-import { useFlash } from '@/composables/useFlash';
-let { flash } = useFlash();
+  import { ref } from 'vue';
+
+  let food = ref('');
+
 </script>
 
 <template>
   <main>
-    <button @click="flash('Hey', 'It is work!')">Click Me!</button>
+    <p>What's your favorite food? <input type="text" v-model="food" /></p>
   </main>
 </template>
