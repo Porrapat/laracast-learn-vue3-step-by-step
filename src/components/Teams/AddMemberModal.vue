@@ -1,26 +1,17 @@
 <script setup>
-import TeamHeader from "@/components/Teams/TeamHeader.vue";
-import TeamMembers from "@/components/Teams/TeamMembers.vue";
-import TeamFooter from "@/components/Teams/TeamFooter.vue";
-import { useTeamStore } from "@/stores/TeamStore";
-
 import Modal from "@/components/Modal.vue";
+import {useTeamStore} from "@/stores/TeamStore";
 import { ref } from "vue";
-
-let team = useTeamStore();
-team.fill();
-
 let showModal = ref(false);
+let team = useTeamStore();
 </script>
 
 <template>
-  <TeamHeader @add="showModal = true" />
-
-  <div class="place-self-center flex flex-col gap-y-3" style="width: 725px">
-    <TeamMembers />
-  </div>
-
-  <TeamFooter />
+  <button
+    class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
+    :disabled="! team.spotsRemaining"
+    @click="showModal = true"
+  >Add Member ({{ team.spotsRemaining }} Spots Left)</button>
 
   <Teleport to="body">
     <Modal :show="showModal" @close="showModal = false">
@@ -36,5 +27,4 @@ let showModal = ref(false);
       </template>
     </Modal>
   </Teleport>
-
 </template>
