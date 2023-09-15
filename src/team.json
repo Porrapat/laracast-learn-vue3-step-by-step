@@ -1,30 +1,30 @@
 {
-  "name": "Paoly team",
-  "spots": 10,
-  "members" : [
+  "name": "Smiley",
+  "spots": 5,
+  "members": [
     {
-      "name": "Pao",
-      "email": "por@gmail.com",
+      "name": "John Doe",
+      "email": "john@doe.com",
       "status": "Active"
     },
     {
-      "name": "Pao1",
-      "email": "por1@gmail.com",
+      "name": "Sarah Doe",
+      "email": "sarah@doe.com",
       "status": "Active"
     },
     {
-      "name": "Pao2",
-      "email": "por2@gmail.com",
+      "name": "Steve Doe",
+      "email": "steve@doe.com",
       "status": "Active"
     },
     {
-      "name": "Pao3",
-      "email": "por3@gmail.com",
+      "name": "Jen Doe",
+      "email": "jen@doe.com",
       "status": "Active"
     },
     {
-      "name": "Pao4",
-      "email": "por4@gmail.com",
+      "name": "Joe Doe",
+      "email": "joe@doe.com",
       "status": "Active"
     }
   ]
