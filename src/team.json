@@ -1,0 +1,31 @@
+{
+  "name": "Paoly team",
+  "spots": 10,
+  "members" : [
+    {
+      "name": "Pao",
+      "email": "por@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Pao1",
+      "email": "por1@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Pao2",
+      "email": "por2@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Pao3",
+      "email": "por3@gmail.com",
+      "status": "Active"
+    },
+    {
+      "name": "Pao4",
+      "email": "por4@gmail.com",
+      "status": "Active"
+    }
+  ]
+}
